@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "652930042478",
+    "project_id": "flirtly-89836",
+    "storage_bucket": "flirtly-89836.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652930042478:android:6f1dc0a153651a3ca1747f",
+        "android_client_info": {
+          "package_name": "com.zaidmansuri.flirtly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652930042478-57qf8nno0tk3p1gneici6er5ndgo66rp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZYDCanM3uQTWEXNzH6X_JqaCA370M5YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "652930042478-57qf8nno0tk3p1gneici6er5ndgo66rp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
