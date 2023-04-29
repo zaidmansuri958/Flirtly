@@ -1,12 +1,12 @@
 package com.zaidmansuri.flirtly.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -30,6 +30,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getData()
+
     }
 
     private fun getData() {
@@ -43,7 +44,8 @@ class HomeFragment : Fragment() {
                     }
                     list.shuffle()
                     if (snapshot.exists()) {
-                        binding.cardStack.adapter = HomeAdapter(requireContext(), list)
+                        adapter = HomeAdapter(requireContext(), list, ::onClick)
+                        binding.cardStack.adapter = adapter
                     } else {
                         Toast.makeText(requireContext(), "Something went wrong", Toast.LENGTH_SHORT)
                             .show()
@@ -56,6 +58,10 @@ class HomeFragment : Fragment() {
                 }
 
             })
+    }
+
+    private fun onClick() {
+        findNavController().navigate(R.id.action_homeFragment_to_videoCallFragment)
     }
 
 }

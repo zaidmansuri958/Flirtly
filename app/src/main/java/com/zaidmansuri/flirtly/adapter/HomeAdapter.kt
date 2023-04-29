@@ -12,7 +12,7 @@ import com.zaidmansuri.flirtly.activity.MessageActivity
 import com.zaidmansuri.flirtly.databinding.UserCardBinding
 import com.zaidmansuri.flirtly.model.UserModel
 
-class HomeAdapter(val context: Context, val arrayList: ArrayList<UserModel>) :
+class HomeAdapter(val context: Context, val arrayList: ArrayList<UserModel>,val onClick: () -> Unit) :
     RecyclerView.Adapter<viewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): viewHolder {
         val view = UserCardBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -33,11 +33,16 @@ class HomeAdapter(val context: Context, val arrayList: ArrayList<UserModel>) :
             intent.putExtra("userID", data.number)
             intent.putExtra(
                 "chatID",
-                 FirebaseAuth.getInstance().currentUser!!.phoneNumber+data.number
+                FirebaseAuth.getInstance().currentUser!!.phoneNumber + data.number
             )
             holder.itemView.context.startActivity(intent)
         }
+        holder.binding.userVideocall.setOnClickListener {
+            onClick()
+        }
+
     }
+
 }
 
 class viewHolder(val binding: UserCardBinding) : ViewHolder(binding.root)
