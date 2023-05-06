@@ -18,7 +18,7 @@ Flirtly : Welcome to the hottest dating app on the market! Are you ready to spic
 <img width=250 src="https://firebasestorage.googleapis.com/v0/b/flirtly-89836.appspot.com/o/ss%2F8.png?alt=media&token=0f2c8f84-a5ad-4756-9f33-c703aec4cc96">
  </td>
  <td>
-<img width=250 src="https://firebasestorage.googleapis.com/v0/b/flirtly-89836.appspot.com/o/ss%2F8.png?alt=media&token=0f2c8f84-a5ad-4756-9f33-c703aec4cc96">
+<img width=250 src="https://firebasestorage.googleapis.com/v0/b/flirtly-89836.appspot.com/o/ss%2F3.png?alt=media&token=d88c5ffe-0612-43ae-a6ec-2778a132644f">
  </td>
   </tr>
   <tr>
